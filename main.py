@@ -10,7 +10,6 @@ class Service:
         self.openai = OpenAI
         self.promptTemplate = PromptTemplate
         self.lLMChain = LLMChain
-        self.chat_history = []
 
     def send(self, message):
         chat_history.append(message)
@@ -24,9 +23,16 @@ class Service:
 
     @staticmethod
     def template_text():
-        template = """%s Question: {text} Answer:""" % chat_history
+        template = """%s Question: {text} Answer:""" % ','.join(chat_history)
 
         return template
 
     def prompt_template(self):
         return self.promptTemplate(input_variables=['text'], template=self.template_text())
+
+
+
+data = ['apple','banana','orange']
+result = 'apple, banana, orange'
+
+
