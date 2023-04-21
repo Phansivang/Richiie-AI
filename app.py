@@ -4,6 +4,7 @@ from flask_sslify import SSLify
 from rate_limit import limit_requests
 
 app = Flask(__name__, template_folder='templates')
+SSLify(app)
 
 
 @app.route('/')
@@ -28,5 +29,4 @@ def get():
 
 
 if __name__ == "__main__":
-    SSLify(app)
     app.run()

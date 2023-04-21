@@ -25,4 +25,4 @@ class Service:
         """
 
     def prompt_template(self):
-        return self.promptTemplate(input_variables=["text"], template=self.template_text())
+        return self.promptTemplate(input_variables=['text'], template=self.template_text())
