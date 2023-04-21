@@ -64,7 +64,7 @@ body {
   background: #ddd;
 }
 .msger-chat::-webkit-scrollbar-thumb {
-  background: #e01111;
+  background: #bdb5b5;
 }
 .msg {
   display: flex;
